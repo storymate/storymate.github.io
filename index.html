@@ -19,7 +19,7 @@
         .hero {
             position: relative;
             width: 100%;
-            height: 80vh;
+            height: 100vh;
             background: url('background.jpg') center/cover no-repeat;
             display: flex;
             justify-content: center;
@@ -27,11 +27,21 @@
             flex-direction: column;
             color: white;
         }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.25);
+        }
         .overlay-text {
-            font-size: 2em;
+            font-size: 8em;
             font-weight: bold;
             margin-bottom: 20px;
-            text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+
+            position: relative;
         }
         .content {
             padding: 40px;
@@ -46,8 +56,8 @@
             align-items: center;
         }
         .footer img {
-            width: 250px;
-            margin-top: 20px;
+            width: 500px;
+            margin-top: 0px;
         }
     </style>
 </head>
@@ -56,8 +66,10 @@
         <div class="overlay-text">Tell your story.</div>
     </div>
     <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Suspendisse potenti.</p>
+        <p><b>Every story starts with your vision.</b><br/> We help creators stay in the moment by capturing, framing, and sharing with ease. No distractions, no friction. Just your vision, unfolding in real time.<br/>Stay tuned 📸</p>
     </div>
+    <div class="footer">
         <img src="logo.png" alt="Storymate Logo">
+    </div>
 </body>
 </html>
